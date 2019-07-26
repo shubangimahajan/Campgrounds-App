@@ -15,7 +15,15 @@ var commentroutes=require("./routes/comments"),
     campgroundroutes=require("./routes/campgrounds"),
     authroutes=require("./routes/auth");
 
-mongoose.connect("mongodb://localhost:27017/campapp2", {useNewUrlParser: true});
+//mongoose.connect("mongodb://localhost:27017/campapp2", {useNewUrlParser: true});
+mongoose.connect("mongodb+srv://shubangi:sstanmay100%2D@cluster01-orioo.mongodb.net/test?retryWrites=true&w=majority", {
+	useNewUrlParser: true,
+	useCreateIndex: true
+	}).then(()=>{
+	console.log("connected to db");
+}).catch(err=>{
+	console.log("error:", err.message);
+});
 
 app.use(bodyparser.urlencoded({extended:true}));
 app.set("view engine","ejs");
