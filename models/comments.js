@@ -8,7 +8,8 @@ var commentSchema= new mongoose.Schema({
 		},
 		username:String
 	},
-	text: String
+	text: String,
+	date: String
 });
 
 var comments= mongoose.model("comments", commentSchema);

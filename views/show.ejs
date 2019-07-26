@@ -37,7 +37,7 @@
 					<div class="row">
 						<div class="col-md-12">
 							<strong><%= comm.author.username %></strong>
-							<span class="pull-right">10 days ago</span>
+							<span class="pull-right"><%=comm.date%></span>
 							<p><%= comm.text %></p>
 							<% if(currentuser && comm.author.id.equals(currentuser._id)){ %>
 							<a href="/campgrounds/<%=camping._id %>/comments/<%=comm._id %>/edit" class="btn btn-xs btn-warning">

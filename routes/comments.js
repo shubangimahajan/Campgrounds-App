@@ -36,6 +36,8 @@ app.post("/",middleware.isloggedin ,function(req,res){
 					comm.author.id=req.user._id;
 					//console.log(req.user.username);
 					comm.author.username=req.user.username;
+					var date= new Date();
+					comm.date=date.toISOString().slice(0,10);
 					//save comment
 					comm.save();
 					campgrounds.comments.push(comm);
