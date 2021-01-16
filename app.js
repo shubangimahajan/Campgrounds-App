@@ -18,9 +18,9 @@ var commentroutes=require("./routes/comments"),
 //mongoose.connect("mongodb://localhost:27017/campapp2", {useNewUrlParser: true});
 //mongoose.connect("mongodb+srv://shubangi:sstanmay100%2D@cluster01-orioo.mongodb.net/test?retryWrites=true&w=majority", {useNewUrlParser: true});
 
-var url="mongodb+srv://camps-db:myfirstdb@cluster-campgrounds.erals.mongodb.net/camps-db?retryWrites=true&w=majority";
-
-//var url=process.env.DATABASEURL || "mongodb://localhost:27017/campapp2";
+//var url="mongodb+srv://camps-db:myfirstdb@cluster-campgrounds.erals.mongodb.net/camps-db?retryWrites=true&w=majority";
+//mongodb+srv://camps-db:myfirstdb@cluster-campgrounds.erals.mongodb.net/camps-db?retryWrites=true&w=majority
+var url=process.env.DATABASEURL || "mongodb://localhost:27017/campapp2";
 
 mongoose.connect(url, {
 	useNewUrlParser: true,
