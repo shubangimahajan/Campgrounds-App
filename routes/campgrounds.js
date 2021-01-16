@@ -29,7 +29,7 @@ app.post("/", middleware.isloggedin,function(req,res){
 		if(err){
 			console.log(err);
 		}else{
-			req.flash("success","New Comment Created");
+			req.flash("success","New Campground Created");
 			res.redirect("/campgrounds");
 		}
 	});
@@ -66,7 +66,7 @@ app.put("/:id",middleware.checkcampgroundownership,function(req,res){
 		if(err){
 			res.redirect("/campgrounds");
 		}else{
-			req.flash("success","Comment Updated Successfully");
+			req.flash("success","Campground Updated Successfully");
 			res.redirect("/campgrounds/" + req.params.id);
 		}
 	});
